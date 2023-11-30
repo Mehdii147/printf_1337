@@ -6,11 +6,26 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 14:48:18 by ehafiane          #+#    #+#             */
-/*   Updated: 2023/11/29 18:51:01 by ehafiane         ###   ########.fr       */
+/*   Updated: 2023/11/30 15:24:52 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_hex_len(unsigned int num)
+{
+	int	len;
+
+	len = 0;
+	if (num < 0)
+		num *= -1;
+	while (num != 0)
+	{
+		len++;
+		num = num / 16;
+	}
+	return (len);
+}
 
 int	ft_hexa(unsigned int nb, const char format)
 {
@@ -72,21 +87,4 @@ int	hex_point(size_t nb, const char format)
 int	ft_put_pointer(size_t nb)
 {
 	return (ft_putstr("0x") + hex_point(nb, 'x'));
-}
-
-int	ft_put_unsigned(unsigned int nb)
-{
-	int		cnt;
-	long	n1 ;
-
-	n1 = nb;
-	cnt = 0;
-	if (n1 >= 10) 
-	{
-		cnt += ft_putnbr(n1 / 10);
-		n1 = n1 % 10;
-	}
-	if (n1 < 10)
-		cnt += ft_putchar(n1 + 48);
-	return (cnt);
 }
