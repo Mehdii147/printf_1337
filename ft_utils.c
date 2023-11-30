@@ -6,7 +6,7 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 14:48:18 by ehafiane          #+#    #+#             */
-/*   Updated: 2023/11/30 15:24:52 by ehafiane         ###   ########.fr       */
+/*   Updated: 2023/11/30 15:50:05 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int	ft_hex_len(unsigned int num)
 	int	len;
 
 	len = 0;
-	if (num < 0)
-		num *= -1;
 	while (num != 0)
 	{
 		len++;
