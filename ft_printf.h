@@ -6,7 +6,7 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 18:46:37 by ehafiane          #+#    #+#             */
-/*   Updated: 2023/11/29 18:51:39 by ehafiane         ###   ########.fr       */
+/*   Updated: 2023/11/30 14:21:08 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define FT_PRINTF_H
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdio.h>
 
 int	ft_check(char c, va_list p);
 int	ft_putchar(char c);
